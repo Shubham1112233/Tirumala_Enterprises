@@ -12,16 +12,71 @@
   height: 400px;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.image-grid-card {
+  min-height: 300px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-grid-card h4 {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.image-grid-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.image-grid-card:hover {
+  transform: translateY(-5px);
+}
+
 .first {
-  background-image: url("../assets/armchair-green-living-room-with-copy-space.jpg"); /* Replace with your image URL */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/armchair-green-living-room-with-copy-space.jpg");
 }
 
 .second {
-  background-image: url("../assets/blue-wall-with-red-sofa.jpg"); /* Replace with your image URL */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/blue-wall-with-red-sofa.jpg");
 }
+
 .third {
-  background-image: url("../assets/green-plant-green-living-room-with-copy-space.jpg"); /* Replace with your image URL */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/green-plant-green-living-room-with-copy-space.jpg");
 }
+
 .fourth {
-  background-image: url("../assets/yellow-armchair-living-room-with-copy-space.jpg"); /* Replace with your image URL */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/yellow-armchair-living-room-with-copy-space.jpg");
+}
+
+.fifth {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/blue-wall-with-red-sofa.jpg");
+}
+
+.sixth {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../assets/green-plant-green-living-room-with-copy-space.jpg");
 }
