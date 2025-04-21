@@ -5,3 +5,23 @@
 @import url("clients.css");
 @import url("counter.css");
 @import url("dropmessage.css");
+
+.our-clients-section .client-logo-card img {
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.photo-gallery .gallery-img-wrapper {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.photo-gallery .gallery-img {
+  transition: transform 0.4s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.photo-gallery .gallery-img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}

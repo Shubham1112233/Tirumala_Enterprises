@@ -10,7 +10,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* Subtle shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Smooth transitions */
+  min-height: 400px;
 }
 
 .feature-box:hover {
@@ -30,12 +30,14 @@
 }
 
 @media (min-width: 992px) {
+
   /* Styles for large screens */
   .feature-box {
     padding: 30px;
     /* More padding on larger screens */
   }
 }
+
 /* Section background with a subtle gradient */
 .feature-section {
   background: linear-gradient(135deg, #e0f7fa, #f0f8ff);
