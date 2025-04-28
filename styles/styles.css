@@ -6,6 +6,18 @@
 @import url("counter.css");
 @import url("dropmessage.css");
 
+/* Navbar Styles */
+#Navigation-bar {
+  z-index: 100; /* Ensure navbar stays above other content, Bootstrap's default is 1030, sticky-top uses 1020 */
+  width: 100%;
+  min-height: 60px;
+  background-color: transparent; /* Light blue with 30% opacity */
+}
+
+#Navigation-bar a {
+  color: white; /* Make links white */
+}
+
 .our-clients-section .client-logo-card img {
   max-height: 80px;
   object-fit: contain;
@@ -24,4 +36,80 @@
 .photo-gallery .gallery-img:hover {
   transform: scale(1.1);
   filter: brightness(1.1);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #e7e7e7;
+}
+
+.footer h5 {
+  color: #343a40;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.footer h5:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #0d6efd;
+}
+
+.footer .nav-link {
+  padding: 0.3rem 0;
+  transition: all 0.3s ease;
+}
+
+.footer .nav-link:hover {
+  color: #0d6efd !important;
+  transform: translateX(5px);
+}
+
+.footer .social-icons a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  transition: all 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  background: #0d6efd;
+  color: white !important;
+}
+
+.footer .social-icons i {
+  line-height: 36px;
+}
+
+.contact-mini-form input,
+.contact-mini-form textarea {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  transition: all 0.3s ease;
+}
+
+.contact-mini-form input:focus,
+.contact-mini-form textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.footer .btn-outline-primary {
+  transition: all 0.3s ease;
+  border-width: 2px;
+}
+
+.footer .btn-outline-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

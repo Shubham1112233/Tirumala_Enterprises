@@ -1,34 +1,11 @@
 .carousel-image-item,
 #carouselExampleAutoplaying {
-  height: 100vh;
-  /* Default for small screens (xs and sm) */
   position: relative;
+  height: 100vh;
 }
 
-@media (min-width: 768px) {
-
-  /* Medium screens (md and above) */
-  .carousel-image-item,
-  #carouselExampleAutoplaying {
-    height: 80vh;
-  }
-}
-
-@media (min-width: 992px) {
-
-  /* Large screens (lg and above) */
-  .carousel-image-item,
-  #carouselExampleAutoplaying {
-    height: 100vh;
-  }
-}
-
-@media (max-width: 576px) {
-
-  .carousel-image-item,
-  #carouselExampleAutoplaying {
-    height: 70vh;
-  }
+.navbar-collapse {
+  justify-content: space-between;
 }
 
 .carousel-overlay {
@@ -46,24 +23,9 @@
   max-width: 90%;
 }
 
-#Navigation-bar {
-  position: absolute;
-  top: 0;
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  z-index: 2;
-  background-color: transparent !important;
-}
-
-#Navigation-bar a {
-  color: white;
-}
-
 .white-border {
-  border: white solid;
-  outline: white;
+  border: 1px solid white;
+  outline: none;
   background-color: transparent;
   color: white;
   text-decoration: none;
@@ -80,4 +42,85 @@
   width: auto;
   min-height: 40px;
   height: auto;
+}
+
+/* Responsive adjustments for overlay and text on smaller screens */
+@media (max-width: 991.98px) {
+  .carousel-overlay {
+    top: 15%;
+  }
+  .innertext-carousel h1 {
+    font-size: 1.8rem; /* Further reduced H1 size */
+  }
+  .innertext-carousel h2 {
+    font-size: 1.15rem; /* Further reduced H2 size */
+  }
+  .innertext-carousel h5 {
+    font-size: 0.8rem; /* Further reduced H5 size */
+  }
+}
+/* Use background images for carousel items on smaller screens */
+@media (max-width: 767.98px) {
+  /* Set height for mobile */
+  #carouselExampleAutoplaying,
+  .carousel-item {
+    height: 100vh;
+  }
+
+  /* Hide the desktop image tags */
+  .carousel-item img.carousel-image-item {
+    display: none !important;
+  }
+
+  /* Apply background image to carousel items */
+  .carousel-item {
+    background-image: url("../assets/red-chair-mob.png"); /* Default for item 1 */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  /* Override background for the second item */
+  .carousel-item:nth-child(2) {
+    background-image: url("../assets/basement.jpeg");
+  }
+
+  #Navigation-bar {
+    background-color: white !important;
+  }
+
+  #Navigation-bar a {
+    color: black !important;
+  }
+
+  #Navigation-bar .navbar-brand {
+    color: black !important;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-buttons .btn-primary {
+    min-height: 20px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .innertext-carousel h1 {
+    font-size: 1.4rem; /* Further reduced H1 size */
+  }
+  .innertext-carousel h2 {
+    font-size: 1rem; /* Further reduced H2 size */
+  }
+  .innertext-carousel h5 {
+    font-size: 1rem; /* Further reduced H5 size */
+  }
+
+  .innertext-carousel p {
+    font-size: 0.8rem; /* Further reduced H5 size */
+  }
 }
