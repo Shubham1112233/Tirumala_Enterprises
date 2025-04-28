@@ -65,6 +65,10 @@
     transform: translate3d(0px, 0, 0);
     will-change: auto; /* Reset after animation */
   }
+
+  .form-feedback {
+    width: 50%;
+  }
 }
 
 .form-feedback {
@@ -76,8 +80,22 @@
   ); /* Darker grey gradient */
   padding: 2rem; /* Add padding inside the form container */
   border-radius: 8px; /* Add rounded corners */
+  width: 100%; /* Full width by default (for mobile) */
 }
 
-.form-feedback {
-  width: 50%;
+/* Responsive adjustments for small screens */
+@media screen and (max-width: 991px) {
+  .estimate .container {
+    padding: 20px 15px;
+  }
+
+  .form-feedback {
+    padding: 1.5rem;
+    margin-top: 30px;
+  }
+
+  .form-feedback .btn-lg {
+    display: block;
+    width: 100%;
+  }
 }
