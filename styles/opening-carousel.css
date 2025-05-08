@@ -49,22 +49,43 @@
   .carousel-overlay {
     top: 15%;
   }
+
   .innertext-carousel h1 {
-    font-size: 1.8rem; /* Further reduced H1 size */
+    font-size: 1.8rem;
+    /* Further reduced H1 size */
   }
+
   .innertext-carousel h2 {
-    font-size: 1.15rem; /* Further reduced H2 size */
+    font-size: 1.15rem;
+    /* Further reduced H2 size */
   }
+
   .innertext-carousel h5 {
-    font-size: 0.8rem; /* Further reduced H5 size */
+    font-size: 0.8rem;
+    /* Further reduced H5 size */
   }
 }
+
 /* Use background images for carousel items on smaller screens */
 @media (max-width: 767.98px) {
+
   /* Set height for mobile */
   #carouselExampleAutoplaying,
   .carousel-item {
     height: 100vh;
+  }
+
+  .carousel-overlay {
+    width: 80% !important;
+    left: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .carousel-buttons {
+    gap: 10px;
   }
 
   /* Hide the desktop image tags */
@@ -74,7 +95,8 @@
 
   /* Apply background image to carousel items */
   .carousel-item {
-    background-image: url("../assets/red-chair-mob.png"); /* Default for item 1 */
+    background-image: url("../assets/red-chair-mob.png");
+    /* Default for item 1 */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -82,7 +104,7 @@
 
   /* Override background for the second item */
   .carousel-item:nth-child(2) {
-    background-image: url("../assets/basement.jpeg");
+    background-image: url("../assets/green-bg-portrait.png");
   }
 
   #Navigation-bar {
@@ -107,20 +129,35 @@
     min-height: 20px;
     font-size: 0.8rem;
   }
+
+  .feature-box p {
+    font-size: 14px;
+  }
+
+  .feature-box h2 {
+    font-size: 21px;
+  }
+
 }
 
 @media (max-width: 600px) {
   .innertext-carousel h1 {
-    font-size: 1.4rem; /* Further reduced H1 size */
+    font-size: 1.4rem;
+    /* Further reduced H1 size */
   }
+
   .innertext-carousel h2 {
-    font-size: 1rem; /* Further reduced H2 size */
+    font-size: 1rem;
+    /* Further reduced H2 size */
   }
+
   .innertext-carousel h5 {
-    font-size: 1rem; /* Further reduced H5 size */
+    font-size: 1rem;
+    /* Further reduced H5 size */
   }
 
   .innertext-carousel p {
-    font-size: 0.8rem; /* Further reduced H5 size */
+    font-size: 0.8rem;
+    /* Further reduced H5 size */
   }
 }

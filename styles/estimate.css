@@ -1,5 +1,6 @@
 .estimate .container {
   padding: 40px;
+  padding-bottom: 0px;
 }
 
 .estimate .col-lg-6 {
@@ -50,37 +51,42 @@
   .inline-left {
     opacity: 0;
     transform: translate3d(-100px, 0, 0);
-    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    transition: transform 0.4s ease-in-out, opacity 0.6s ease-in-out;
   }
 
   .inline-right {
     opacity: 0;
     transform: translate3d(100px, 0px, 0px) rotateZ(0deg);
-    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    transition: transform 0.4s ease-in-out, opacity 0.6s ease-in-out;
   }
 
   .inline-left.is-visible,
   .inline-right.is-visible {
     opacity: 1;
     transform: translate3d(0px, 0, 0);
-    will-change: auto; /* Reset after animation */
+    will-change: auto;
+    /* Reset after animation */
   }
 
-  .form-feedback {
-    width: 50%;
+  .width-50 {
+    width: 50% !important;
   }
+
 }
 
 .form-feedback {
-  /* background-color: #ffffff; */ /* Replaced with gradient */
-  background-image: linear-gradient(
-    to bottom,
-    #e2e2e2,
-    #c8c8c8
-  ); /* Darker grey gradient */
-  padding: 2rem; /* Add padding inside the form container */
-  border-radius: 8px; /* Add rounded corners */
-  width: 100%; /* Full width by default (for mobile) */
+  /* background-color: #ffffff; */
+  /* Replaced with gradient */
+  background-image: linear-gradient(to bottom,
+      #e2e2e2,
+      #c8c8c8);
+  /* Darker grey gradient */
+  padding: 2rem;
+  /* Add padding inside the form container */
+  border-radius: 8px;
+  /* Add rounded corners */
+  width: 100%;
+  /* Full width by default (for mobile) */
 }
 
 /* Responsive adjustments for small screens */
@@ -98,4 +104,6 @@
     display: block;
     width: 100%;
   }
+
+
 }
