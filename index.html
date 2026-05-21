@@ -687,12 +687,23 @@
         return;
       }
 
+      function trackContactConversion() {
+        gtag("event", "conversion", {
+          send_to: "AW-18166367192/CJ_mCJioo68cENiHs9ZD",
+        });
+      }
+
       const contactForm = document.getElementById("contact-form");
       const footerContactForm = document.getElementById("footer-contact-form");
 
       if (contactForm) {
         contactForm.addEventListener("submit", function (event) {
           event.preventDefault();
+          if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+            return;
+          }
+          trackContactConversion();
 
           const formData = {
             name: document.getElementById("exampleInputName").value,
@@ -728,6 +739,11 @@
       if (footerContactForm) {
         footerContactForm.addEventListener("submit", function (event) {
           event.preventDefault();
+          if (!footerContactForm.checkValidity()) {
+            footerContactForm.reportValidity();
+            return;
+          }
+          trackContactConversion();
 
           const formData = {
             name: document.getElementById("footerName").value,
